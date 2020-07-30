@@ -19,7 +19,7 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
 
     // Turn player selection into lowercase:
-    playerSelection = prompt("Make your move: rock, paper, or scissors?", "rock").toLowerCase();
+    playerSelection = prompt("Make your move: rock, paper, or scissors?").toLowerCase();
     computerSelection = computerPlay();
 
     // Possible outcomes:
@@ -33,11 +33,11 @@ function playRound(playerSelection, computerSelection) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You win! Let's see if you can keep that up."); // Here rock vs scissors _ player wins
         playerRoundsWon++;
     } else if ((playerSelection == "paper") && (computerSelection == "paper")) {
-        return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". It's a tie, you copying my move again!"); // Here paper vs paper _ tie
+        return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". It's a tie, you copied my move again!"); // Here paper vs paper _ tie
         //TIE
     } else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You lose! keep trying..let's go."); // Here paper vs scissors _ comp wins
-        compRoundsWon;
+        compRoundsWon++;
     } else if ((playerSelection == "paper") && (computerSelection == "rock")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You win! Nice move."); // Here paper vs rock _ player wins
         playerRoundsWon++;
@@ -54,6 +54,7 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
+
 // Play 5 rounds, keep score and log winner/loser at the end:
 
 function game() {
@@ -62,9 +63,10 @@ function game() {
     console.log(playRound(playerSelection, computerSelection))
     console.log(playRound(playerSelection, computerSelection))
     console.log(playRound(playerSelection, computerSelection))
-    if (compRoundsWon > playerSelection) {
+    
+    if (compRoundsWon > playerRoundsWon) {
         console.log("Haha! I won this game.");
-    } else if (compRoundsWon < playerSelection) {
+    } else if (compRoundsWon < playerRoundsWon) {
         console.log("Ight! You won this game.")
     } else {
         console.log("Wow! It's a tie!")
