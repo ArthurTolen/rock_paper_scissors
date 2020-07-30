@@ -1,4 +1,4 @@
-let playSelection, computerSelection, playerRoundsWon = 0,
+let playerSelection, computerSelection, playerRoundsWon = 0,
 compRoundsWon = 0;
 
 
@@ -19,35 +19,35 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
 
     // Turn player selection into lowercase:
-    playSelection = prompt("Make your move: rock, paper, or scissors?", "rock").toLowerCase();
+    playerSelection = prompt("Make your move: rock, paper, or scissors?", "rock").toLowerCase();
     computerSelection = computerPlay();
 
     // Possible outcomes:
-    if ((playSelection == "rock" && computerSelection == "rock")) {
+    if ((playerSelection == "rock" && computerSelection == "rock")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playSelection + ". It's a tie, hmm you copied my move!") // Here rock vs rock _ tie
         //TIE
-    } else if ((playSelection == "rock") && (computerSelection == "paper")) {
+    } else if ((playerSelection == "rock") && (computerSelection == "paper")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You lose! try again c'mon."); // Here rock vs paper _ comp wins
         compRoundsWon++;
-    } else if ((playSelection == "rock") && (computerSelection == "scissors")) {
+    } else if ((playerSelection == "rock") && (computerSelection == "scissors")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You win! Let's see if you can keep that up."); // Here rock vs scissors _ player wins
         playerRoundsWon++;
-    } else if ((playSelection == "paper") && (computerSelection == "paper")) {
+    } else if ((playerSelection == "paper") && (computerSelection == "paper")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". It's a tie, you copying my move again!"); // Here paper vs paper _ tie
         //TIE
-    } else if ((playSelection == "paper") && (computerSelection == "scissors")) {
+    } else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You lose! keep trying..let's go."); // Here paper vs scissors _ comp wins
         compRoundsWon;
-    } else if ((playSelection == "paper") && (computerSelection == "rock")) {
+    } else if ((playerSelection == "paper") && (computerSelection == "rock")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You win! Nice move."); // Here paper vs rock _ player wins
         playerRoundsWon++;
-    } else if ((playSelection == "scissors") && (computerSelection == "scissors")) {
+    } else if ((playerSelection == "scissors") && (computerSelection == "scissors")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". It's a tie, come on... gotta stop copying me now!"); // Here scissors vs scissors _ tie
         //TIE
-    } else if ((playSelection == "scissors") && (computerSelection == "paper")) {
+    } else if ((playerSelection == "scissors") && (computerSelection == "paper")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You win! You're getting really good"); // Here scissors vs paper _ player wins
         playerRoundsWon++;
-    } else if ((playSelection == "scissors") && (computerSelection == "rock")) {
+    } else if ((playerSelection == "scissors") && (computerSelection == "rock")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You lose! too bad, I thought you had this."); // Here scissors vs rock _ comp wins
         compRoundsWon++;
     }
