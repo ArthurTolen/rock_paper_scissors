@@ -33,7 +33,7 @@ function playRound(playerSelection, computerSelection) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You win! Let's see if you can keep that up."); // Here rock vs scissors _ player wins
         playerRoundsWon++;
     } else if ((playerSelection == "paper") && (computerSelection == "paper")) {
-        return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". It's a tie, you copied my move again!"); // Here paper vs paper _ tie
+        return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". It's a tie, you copied my move!"); // Here paper vs paper _ tie
         //TIE
     } else if ((playerSelection == "paper") && (computerSelection == "scissors")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You lose! keep trying..let's go."); // Here paper vs scissors _ comp wins
