@@ -24,7 +24,7 @@ function playRound(playerSelection, computerSelection) {
 
     // Possible outcomes:
     if ((playerSelection == "rock" && computerSelection == "rock")) {
-        return ("Computer chose " + computerSelection + ", and You chose " + playSelection + ". It's a tie, hmm you copied my move!") // Here rock vs rock _ tie
+        return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". It's a tie, hmm you copied my move!") // Here rock vs rock _ tie
         //TIE
     } else if ((playerSelection == "rock") && (computerSelection == "paper")) {
         return ("Computer chose " + computerSelection + ", and You chose " + playerSelection + ". You lose! try again c'mon."); // Here rock vs paper _ comp wins
